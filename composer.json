@@ -20,12 +20,6 @@
         "friendsofphp/php-cs-fixer": "^2.16",
         "infection/infection": "^0.16.3"
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:aeon-php/calendar.git"
-        }
-    ],
     "license": "MIT",
     "autoload": {
         "files": ["src/Aeon/Calendar/System/sleep.php"],
@@ -45,6 +39,11 @@
         "sort-packages": true
     },
     "scripts": {
+        "build": [
+            "@static:analyze",
+            "@test",
+            "@test:mutation"
+        ],
         "test": [
             "phpunit"
         ],

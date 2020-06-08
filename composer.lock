@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8581bebb749f2e01608261cb7fdc05f4",
+    "content-hash": "dde1cedd56c2830efda1af0af3a25240",
     "packages": [
         {
             "name": "aeon-php/calendar",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:aeon-php/calendar.git",
+                "url": "https://github.com/aeon-php/calendar.git",
                 "reference": "29c558f737e17e2dac9a2e30857c3e363d68a5bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/29c558f737e17e2dac9a2e30857c3e363d68a5bb",
+                "reference": "29c558f737e17e2dac9a2e30857c3e363d68a5bb",
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.4.2",
@@ -41,32 +47,7 @@
                     ]
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Aeon\\Calendar\\Tests\\": "tests/Aeon/Calendar/Tests/"
-                }
-            },
-            "scripts": {
-                "build": [
-                    "@static:analyze",
-                    "@test",
-                    "@test:mutation"
-                ],
-                "test": [
-                    "phpunit"
-                ],
-                "test:mutation": [
-                    "infection -vvv --test-framework-options='--testsuite=unit' --only-covered --log-verbosity=default --min-covered-msi=74 --threads=2"
-                ],
-                "static:analyze": [
-                    "psalm --output-format=compact",
-                    "phpstan analyze -c phpstan.neon",
-                    "php-cs-fixer fix --dry-run"
-                ],
-                "cs:php:fix": [
-                    "php-cs-fixer fix"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
